@@ -1,125 +1,123 @@
+/* Todos os elementos da página */
 * {
-    margem : 0 ;
-    preenchimento : 0 ;
-    }
-    
-    /* Elementos com o ID "título" */
-    # título {
-    família de fontes : sans-serif;
-    cor : # 000000 ;
-    margem esquerda : 7 % ;
-    }
-    
-    /* Elementos com o ID "subtítulo" */
-    # legenda {
-    família de fontes : sans-serif;
-    cor : # FF69B4 ;
-    margem esquerda : 10 % ;
-    }
-    
-    # verificar {
-    exibição : bloco embutido;
-    }
-    
-    /* Elementos da tag <fieldset>*/
-    conjunto de campos {
-    borda : 0 ;
-    }
-    
-    /* Elemento de tag <body> */
-    corpo {
-    cor de fundo : # F0F8FF ;
-    família de fontes : sans-serif;
-    tamanho da fonte : 1 em ;
-    cor : # 59429d ;
-    margem esquerda : 36 % ;
-    margem superior : 2 % ;
-    justificar-conteúdo : centro;
-    }
-    
-    /* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
-    entrada , selecionar , textarea , botão {
-    família de fontes : sans-serif;
-    tamanho da fonte : 1 em ;
-    cor : # 000000 ;
-    raio da borda : 5 px ;
-    }
-    
-    /* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
-    . grupo : antes , . grupo : depois {
-    exibição : tabela;
-    }
-    
-    /* Elementos de classe "grupo" no estado da pseudoclasse "after" */
-    . grupo : depois {
-    claro : ambos;
-    }
-    
-    /* Elementos de classe "campo" */
-    . campo {
-    margem-inferior : 1 em ;
-    }
-    
-    /* Elementos de classe "campo" da tag <label> */
-    . rótulo do campo {
-    margem inferior : 0,2 em ;
-    cor : # 000000 ;
-    exibir : bloco;
-    }
-    
-    /* Elementos de classe "campo" ou "grupo" da tag <fieldset> */
-    fieldset . grupo . campo {
-    flutuar : esquerda;
-    margem-direita : 1 em ;
-    }
-    
-    /* Elementos de classe "campo" das tags <input> com atributo text e email, da tag
-    <select> e da tag <textarea>*/
-    . campo input [ tipo = "texto" ] , . campo input [ tipo = "email" ] , . campo select , .
-    campo textarea {
-    preenchimento : 0,2 em ;
-    borda : 1 px sólido # 59429d ;
-    caixa - sombra : 2 px 2 px 2 px rgba ( 0 , 0 , 0.2 );
-    exibir : bloco;
-    }
-    
-    /* Elementos de classe "campo" da tag <select> e <option>*/
-    . campo selecione a opção {
-    preenchimento-direito : 1 em ;
-    }
-    
-    /* Elemento de classe "campo" com tag <input>, <select> e <textarea> tocas com
-    estado da pseudoclasse "focus"*/
-    . campo input : foco , . campo select : foco , . campo textarea : foco {
-    fundo : # E0E0F8 ;
-    }
-    
-    /* Elemento de classe "botão" */
-    . botao {
-    tamanho da fonte : 1,2 em ;
-    fundo : # 000000 ;
-    borda : 0 ;
-    
-    margem-inferior : 1 em ;
-    cor : # ffffff ;
-    preenchimento : 0,2 em 0,6 em ;
-    caixa - sombra : 2 px 2 px 2 px rgba ( 0 , 0 , 0.2 );
-    sombra de texto : 1 px 1 px 1 px rgba ( 0 , 0 , 0 , 0.5 );
-    posição : absoluta;
-    topo : 90 % ;
-    esquerda : 50 % ;
-    margem direita : -50 % ;
-    transformar : traduzir ( -50 % , -50 % )
-    }
-    
-    /* Elemento de classe "botão" com o estado da pseudoclasse "hover" */
-    . botao : hover {
-    fundo : # CCBBFF ;
-    caixa-sombra : inserção 2 px 2 px 2 px rgba ( 0 , 0 , 0 , 0.2 );
-    text-shadow : nenhum;
-    }
-    
-    /* Elementos de classe botão e tag <select> */
-    . botao , selecione {
-    cursor : ponteiro;
-    }
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Elementos com o ID "titulo" */
+  #titulo {
+    font-family: sans-serif;
+    color: #000000;
+    margin-left: 7%;
+  }
+  
+  /* Elementos com o ID "subtitulo" */
+  #subtitulo {
+    font-family: sans-serif;
+    color: #FF69B4;
+    margin-left: 10%;
+  }
+  
+  #verificar {
+    display: inline-block;
+  }
+  
+  /* Elementos da tag <fieldset> */
+  fieldset {
+    border: 0;
+  }
+  
+  /* Elemento de tag <body> */
+  body {
+    background-color: #F0F8FF;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+  }
+  
+  /* Elementos de tags <body>, <input>, <select>, <textarea> e <button> */
+  input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #000000;
+    border-radius: 5px;
+  }
+  
+  /* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
+  .grupo:before, .grupo:after {
+    display: table;
+  }
+  
+  /* Elementos de classe "grupo" no estado da pseudoclasse "after" */
+  .grupo:after {
+    clear: both;
+  }
+  
+  /* Elementos de classe "campo" */
+  .campo {
+    margin-bottom: 1em;
+  }
+  
+  /* Elementos de classe "campo" da tag <label> */
+  .campo label {
+    margin-bottom: 0.2em;
+    color: #000000;
+    display: block;
+  }
+  
+  /* Elementos de classe "campo" ou "grupo" da tag <fieldset> */
+  fieldset.grupo .campo {
+    float: left;
+    margin-right: 1em;
+  }
+  
+  /* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
+  .campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+    padding: 0.2em;
+    border: 1px solid #59429d;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    display: block;
+  }
+  
+  /* Elementos de classe "campo" da tag <select> e <option> */
+  .campo select option {
+    padding-right: 1em;
+  }
+  
+  /* Elemento de classe "campo" com tag <input>, <select> e <textarea> tocas com estado da pseudoclasse "focus" */
+  .campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: #E0E0F8;
+  }
+  
+  /* Elemento de classe "botao" */
+  .botao {
+    font-size: 1.2em;
+    background: #000000;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+  .botao:hover {
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+  }
+  
+  /* Elementos de classe botão e tag <select> */
+  .botao, select {
+    cursor: pointer;
+  }
+  
