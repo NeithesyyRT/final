@@ -1,11 +1,15 @@
-/* Todos os elementos da página */
+/* Estilos globais */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos básicos do corpo */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #f5f5f5;
@@ -13,24 +17,28 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   padding: 20px;
+  margin: 0;
+  overflow: hidden;
 }
 
 /* Container principal */
 .container {
   display: flex;
+  flex-direction: row;
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 900px;
   width: 100%;
-  flex-direction: column;
+  height: 100%;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1200px) {
   .container {
-      flex-direction: row;
+    flex-direction: column;
+    height: auto;
   }
 }
 
@@ -39,18 +47,11 @@ body {
   background: #022e66;
   color: white;
   padding: 2em;
+  text-align: center;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .welcome-section {
-      width: 40%;
-  }
 }
 
 .welcome-section h1 {
@@ -92,13 +93,11 @@ body {
 /* Seção de registro */
 .register-section {
   padding: 2em;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .register-section {
-      width: 60%;
-  }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto; /* Adiciona rolagem vertical */
 }
 
 .register-section h2 {
@@ -157,4 +156,19 @@ body {
 
 .botao:hover {
   background: #e0a800;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 767px) {
+  .welcome-section h1 {
+    font-size: 1.5em;
+  }
+
+  .welcome-section p {
+    font-size: 1em;
+  }
+
+  .register-section h2 {
+    font-size: 1.2em;
+  }
 }
